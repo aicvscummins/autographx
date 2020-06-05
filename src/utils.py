@@ -62,5 +62,5 @@ def get_autographs(pathtofile):
     return autos
 
     def writetofile(autos):
-      with open(data.txt,'w') as outfile:
+      with open('data.txt','w') as outfile:
         json.dump(data,outfile)
