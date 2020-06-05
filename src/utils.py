@@ -4,6 +4,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from pathlib import Path
+import json
 
 def split_paragraph(para, n):
     """Returns a string that's sliced after n words.
@@ -59,3 +60,7 @@ def get_autographs(pathtofile):
                 autos[name][str(x)[l:-4]] = output
 
     return autos
+
+    def writetofile(autos):
+      with open(data.txt,'w') as outfile:
+        json.dump(data,outfile)
